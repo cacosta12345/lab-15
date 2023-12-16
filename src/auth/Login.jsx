@@ -1,17 +1,18 @@
-import {useAuth0} from '@auth0/auth0-react';
+import { useAuth0} from '@auth0/auth0-react';
 
-function LoginButton() {
+function Login() {
 
-  const { isAuthenticated, loginWithRedirect } = useAuth0();
+  const {
+    isAuthenticated,
+    loginWithRedirect,
+  } = useAuth0();
 
   function handleLogin() {
     loginWithRedirect();
   }
 
-  return (
-    isAuthenticated ? null : <button onClick={handleLogin}>Log In</button>
-  )
-
+  return ! isAuthenticated &&
+    <button onClick={handleLogin}>Log in</button>
+  ;
 }
-
-export default LoginButton;
+export default Login;
