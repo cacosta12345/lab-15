@@ -31,7 +31,7 @@ function Dogs(props) {
   return (
     <ul>
       {
-        dogs.map( book => <li key={book._id}>{book.title}</li> )
+        dogs.map( dog => <li key={dog._id}>{dog.title}</li> )
       }
     </ul>
   )
