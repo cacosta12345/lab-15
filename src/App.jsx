@@ -1,6 +1,6 @@
 import { withAuth0 } from '@auth0/auth0-react';
 
-import AuthButtons from './Auth/Buttons.jsx';
+import AuthButtons from './auth/Button.jsx';
 
 import Dogs from './components/Dogs.jsx';
 
